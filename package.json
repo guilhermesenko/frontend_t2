@@ -1,0 +1,18 @@
+{
+  "name": "frontend_t2",
+  "version": "1.0.0",
+  "description": "Frontend do Clube de Leitura (INF1407) — site estático HTML/CSS/TypeScript que consome a API REST.",
+  "scripts": {
+    "build": "tsc -p typescript",
+    "watch": "tsc -w -p typescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermesenko/frontend_t2.git"
+  },
+  "author": "guilhermesenko",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
