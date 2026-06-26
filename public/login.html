@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - Clube de Leitura</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Clube de Leitura</h1>
+    <nav>
+      <a href="index.html">Catálogo</a>
+      <a href="login.html">Entrar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Entrar</h2>
+      <form id="form-login">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+        <p id="erro" class="erro"></p>
+      </form>
+      <p>Não tem conta? <a href="registrar.html">Cadastre-se</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>INF1407 - PUC-Rio - <span id="ano"></span></p>
+  </footer>
+
+  <script type="module" src="javascript/login.js"></script>
+</body>
+</html>

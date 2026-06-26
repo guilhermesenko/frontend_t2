@@ -75,6 +75,53 @@ main {
   margin: 0.4rem 0 0;
 }
 
+.cartao {
+  background: #fff;
+  border: 1px solid #e2d8c8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 380px;
+}
+
+.cartao form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao label {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cartao input {
+  padding: 0.5rem;
+  border: 1px solid #cbbfae;
+  border-radius: 5px;
+  margin-top: 0.2rem;
+}
+
+.cartao button {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background: var(--cor-principal);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cartao button:hover {
+  background: #553318;
+}
+
+.erro {
+  color: #b00020;
+  min-height: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
