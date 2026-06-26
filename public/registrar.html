@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Clube de Leitura</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Clube de Leitura</h1>
+    <nav id="navegacao"></nav>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Criar conta</h2>
+      <form id="form-registro">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Cadastrar</button>
+        <p id="mensagem" class="erro"></p>
+      </form>
+      <p>Já tem conta? <a href="login.html">Entrar</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>INF1407 - PUC-Rio - <span id="ano"></span></p>
+  </footer>
+
+  <script type="module" src="javascript/registro.js"></script>
+</body>
+</html>

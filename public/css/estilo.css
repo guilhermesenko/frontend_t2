@@ -122,6 +122,12 @@ main {
   margin: 0.5rem 0 0;
 }
 
+.sucesso {
+  color: #1b7a35;
+  min-height: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;

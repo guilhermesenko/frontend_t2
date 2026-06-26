@@ -41,3 +41,35 @@ export function fetchAutenticado(rota: string, opcoes: RequestInit = {}): Promis
   }
   return fetch(backendAddress + rota, { ...opcoes, headers });
 }
+
+export interface Usuario {
+  id: number;
+  username: string;
+  email: string;
+  is_staff: boolean;
+}
+
+// Busca os dados do usuário logado (ou null se não estiver autenticado).
+export async function getUsuario(): Promise<Usuario | null> {
+  if (!estaLogado()) {
+    return null;
+  }
+  try {
+    const resposta = await fetchAutenticado('contas/whoami/');
+    if (!resposta.ok) {
+      return null;
+    }
+    return await resposta.json();
+  } catch (erro) {
+    return null;
+  }
+}
+
+// Redireciona para a tela de login caso o usuário não esteja autenticado.
+export function exigirLogin(): boolean {
+  if (!estaLogado()) {
+    window.location.href = 'login.html';
+    return false;
+  }
+  return true;
+}
