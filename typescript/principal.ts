@@ -1,4 +1,8 @@
 import { carregarCatalogo } from './catalogo.js';
+import { montarNavegacao } from './nav.js';
+
+// Monta o menu conforme o estado de login.
+montarNavegacao();
 
 // Preenche o ano atual no rodapé.
 const ano = document.getElementById('ano');

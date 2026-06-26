@@ -1,4 +1,7 @@
 import { login } from './auth.js';
+import { montarNavegacao } from './nav.js';
+
+montarNavegacao();
 
 const ano = document.getElementById('ano');
 if (ano) {
