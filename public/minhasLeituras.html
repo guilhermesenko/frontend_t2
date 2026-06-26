@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas leituras - Clube de Leitura</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Clube de Leitura</h1>
+    <nav id="navegacao"></nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Minhas leituras</h2>
+      <p id="status-lista"></p>
+      <ul id="lista-leituras"></ul>
+    </section>
+
+    <section class="cartao">
+      <h3 id="titulo-form">Adicionar leitura</h3>
+      <form id="form-leitura">
+        <input type="hidden" id="leitura-id">
+
+        <label for="livro">Livro</label>
+        <select id="livro" required></select>
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="quero_ler">Quero Ler</option>
+          <option value="lendo">Lendo</option>
+          <option value="li">Li</option>
+        </select>
+
+        <label for="nota">Nota (1 a 5, só depois de ler)</label>
+        <input type="number" id="nota" min="1" max="5">
+
+        <label for="resenha">Resenha</label>
+        <textarea id="resenha" rows="3"></textarea>
+
+        <div class="acoes-form">
+          <button type="submit" id="botao-salvar">Adicionar</button>
+          <button type="button" id="botao-cancelar" class="secundario" hidden>Cancelar</button>
+        </div>
+        <p id="mensagem" class="erro"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>INF1407 - PUC-Rio - <span id="ano"></span></p>
+  </footer>
+
+  <script type="module" src="javascript/leituras.js"></script>
+</body>
+</html>
