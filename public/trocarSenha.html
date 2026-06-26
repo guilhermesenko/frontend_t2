@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trocar senha - Clube de Leitura</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Clube de Leitura</h1>
+    <nav id="navegacao"></nav>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Trocar senha</h2>
+      <form id="form-trocar">
+        <label for="senha-atual">Senha atual</label>
+        <input type="password" id="senha-atual" required>
+
+        <label for="senha-nova">Nova senha</label>
+        <input type="password" id="senha-nova" required>
+
+        <button type="submit">Trocar senha</button>
+        <p id="mensagem" class="erro"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>INF1407 - PUC-Rio - <span id="ano"></span></p>
+  </footer>
+
+  <script type="module" src="javascript/trocarSenha.js"></script>
+</body>
+</html>

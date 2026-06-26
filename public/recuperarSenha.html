@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar senha - Clube de Leitura</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Clube de Leitura</h1>
+    <nav id="navegacao"></nav>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Esqueci minha senha</h2>
+      <p>Informe seu e-mail para receber o token de redefinição.</p>
+      <form id="form-solicitar">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+        <button type="submit">Enviar token</button>
+        <p id="msg-solicitar" class="sucesso"></p>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Redefinir senha</h2>
+      <p>Cole o uid e o token recebidos e escolha a nova senha.</p>
+      <form id="form-confirmar">
+        <label for="uid">uid</label>
+        <input type="text" id="uid" required>
+
+        <label for="token">Token</label>
+        <input type="text" id="token" required>
+
+        <label for="senha-nova">Nova senha</label>
+        <input type="password" id="senha-nova" required>
+
+        <button type="submit">Redefinir senha</button>
+        <p id="msg-confirmar" class="erro"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>INF1407 - PUC-Rio - <span id="ano"></span></p>
+  </footer>
+
+  <script type="module" src="javascript/recuperarSenha.js"></script>
+</body>
+</html>
