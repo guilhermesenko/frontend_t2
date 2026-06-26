@@ -48,6 +48,33 @@ main {
   padding: 0;
 }
 
+.livro {
+  background: #fff;
+  border: 1px solid #e2d8c8;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.livro strong {
+  font-size: 1.1rem;
+}
+
+.livro .autor {
+  color: var(--cor-principal);
+  margin-left: 0.4rem;
+}
+
+.livro .meta {
+  color: #8a7f70;
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
+}
+
+.livro p {
+  margin: 0.4rem 0 0;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
