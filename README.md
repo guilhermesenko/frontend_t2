@@ -1,7 +1,7 @@
-# Clube de Leitura — Frontend
+# Clube de Leitura - Frontend
 
 Frontend do **Clube de Leitura**, trabalho 2 da disciplina INF1407 (Programação para
-Web — PUC-Rio). É um site **estático** em HTML + CSS + **TypeScript** que consome a
+Web - PUC-Rio). É um site **estático** em HTML + CSS + **TypeScript** que consome a
 API REST do backend (projeto separado) via `fetch`.
 
 - Repositório do backend: https://github.com/guilhermesenko/backend_t2

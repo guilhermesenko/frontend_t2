@@ -1,7 +1,7 @@
 {
   "name": "frontend_t2",
   "version": "1.0.0",
-  "description": "Frontend do Clube de Leitura (INF1407) — site estático HTML/CSS/TypeScript que consome a API REST.",
+  "description": "Frontend do Clube de Leitura (INF1407) - site estático HTML/CSS/TypeScript que consome a API REST.",
   "scripts": {
     "build": "tsc -p typescript",
     "watch": "tsc -w -p typescript"
