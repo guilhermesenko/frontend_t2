@@ -1,0 +1,56 @@
+:root {
+  --cor-principal: #6b4226;
+  --cor-fundo: #f5f0e8;
+  --cor-texto: #2c2620;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+header {
+  background: var(--cor-principal);
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#lista-livros {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6b6256;
+  font-size: 0.9rem;
+}
