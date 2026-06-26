@@ -1,7 +1,7 @@
-import { estaLogado, logout } from './auth.js';
+import { estaLogado, logout, getUsuario } from './auth.js';
 
-// Monta os links do menu conforme o usuário esteja logado ou não.
-export function montarNavegacao(): void {
+// Monta os links do menu conforme o usuário esteja logado e seu papel.
+export async function montarNavegacao(): Promise<void> {
   const nav = document.getElementById('navegacao');
   if (!nav) {
     return;
@@ -10,6 +10,15 @@ export function montarNavegacao(): void {
   nav.appendChild(criarLink('index.html', 'Catálogo'));
 
   if (estaLogado()) {
+    nav.appendChild(criarLink('minhasLeituras.html', 'Minhas leituras'));
+    nav.appendChild(criarLink('trocarSenha.html', 'Trocar senha'));
+
+    // Link exclusivo de administrador (depende do whoami).
+    const usuario = await getUsuario();
+    if (usuario && usuario.is_staff) {
+      nav.appendChild(criarLink('adminLivros.html', 'Gerenciar livros'));
+    }
+
     const sair = criarLink('#', 'Sair');
     sair.addEventListener('click', (evento) => {
       evento.preventDefault();
@@ -19,6 +28,7 @@ export function montarNavegacao(): void {
     nav.appendChild(sair);
   } else {
     nav.appendChild(criarLink('login.html', 'Entrar'));
+    nav.appendChild(criarLink('registrar.html', 'Cadastrar'));
   }
 }
 
