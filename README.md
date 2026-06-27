@@ -4,6 +4,8 @@ Frontend do **Clube de Leitura**, trabalho 2 da disciplina INF1407 (Programaçã
 Web - PUC-Rio). É um site **estático** em HTML + CSS + **TypeScript** que consome a
 API REST do backend (projeto separado) via `fetch`.
 
+**Autor:** Guilherme Riechert Senko (matrícula 2011478)
+
 - Repositório do backend: https://github.com/guilhermesenko/backend_t2
 
 ## Funcionalidades
@@ -78,3 +80,38 @@ docker run -p 8080:80 clubeleitura_frontend_t2
 ```
 
 Acesse `http://localhost:8080`.
+
+## Telas
+
+Catálogo de livros (público):
+
+![Catálogo](public/img/catalogo.png)
+
+Minhas leituras (usuário logado, com CRUD e menu por papel):
+
+![Minhas leituras](public/img/minhas-leituras.png)
+
+Tela de login:
+
+![Login](public/img/login.png)
+
+Cadastro de usuário:
+
+![Cadastro](public/img/registro.png)
+
+## O que funcionou e o que não funcionou
+
+Tudo o que foi proposto foi testado e está funcionando:
+
+- Catálogo carregado da API (visível para visitantes).
+- Cadastro e login de usuário, com o token JWT guardado no `localStorage`.
+- CRUD de leituras do próprio usuário (adicionar, editar e remover), incluindo a
+  validação de só permitir nota depois de ler.
+- Área de administrador (cadastro, edição e remoção de livros), visível apenas para
+  usuários `is_staff`.
+- Troca de senha e redefinição de senha por token.
+- Menu de navegação diferente para visitante, usuário comum e administrador.
+
+Não há funcionalidades com problemas conhecidos. O endereço do backend é configurado
+em `typescript/constantes.ts`; para a redefinição de senha, o token é exibido no log
+do backend (que usa backend de e-mail de console em desenvolvimento).
