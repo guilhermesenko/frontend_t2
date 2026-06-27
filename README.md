@@ -60,7 +60,7 @@ npm run build        # compila uma vez
 npm run watch        # recompila a cada alteração
 ```
 
-Sirva a pasta `public/`:
+Mude para a pasta `public/`:
 
 ```bash
 cd public
