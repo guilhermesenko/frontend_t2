@@ -69,10 +69,39 @@ python3 -m http.server 8080
 
 Acesse `http://localhost:8080`.
 
-## Rodando com Docker
+## Rodando a imagem publicada no Docker Hub
 
-O `Dockerfile` faz um build em duas etapas: compila o TypeScript e serve os arquivos
-estáticos com nginx.
+A imagem do frontend está publicada em
+[guilhermesenko/clubeleitura_frontend_t2](https://hub.docker.com/r/guilhermesenko/clubeleitura_frontend_t2).
+
+```bash
+docker pull guilhermesenko/clubeleitura_frontend_t2:latest
+docker run -p 8080:80 guilhermesenko/clubeleitura_frontend_t2:latest
+```
+
+Acesse `http://localhost:8080`.
+
+> **Importante:** o frontend consome a API em `http://localhost:8000/`
+> (valor de `backendAddress` em `typescript/constantes.ts`). Portanto, para o site
+> funcionar, o **backend precisa estar rodando em `http://localhost:8000/`**. Suba os
+> dois containers (veja o README do backend) e abra `http://localhost:8080`.
+
+### Aplicação completa (backend + frontend)
+
+```bash
+# backend
+docker run --name clube_back -p 8000:8000 guilhermesenko/clubeleitura_backend_t2:latest
+# frontend (em outro terminal)
+docker run -p 8080:80 guilhermesenko/clubeleitura_frontend_t2:latest
+```
+
+Depois abra `http://localhost:8080`. Para usar a área de administrador, crie um
+superusuário: `docker exec -it clube_back python manage.py createsuperuser`.
+
+## Build local com Docker
+
+A partir do código-fonte, o `Dockerfile` faz um build em duas etapas: compila o
+TypeScript e serve os arquivos estáticos com nginx.
 
 ```bash
 docker build -t clubeleitura_frontend_t2 .
